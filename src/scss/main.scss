@@ -1,0 +1,119 @@
+@import "variables";
+
+body {
+    background-color: $background-color;
+
+    @include font($ff: "Proxima Nova Rg");
+}
+
+a {
+    color: $color-link;
+}
+
+p, h1 {
+    margin: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.meta-block {
+    background-color: $background-color;
+}
+
+.main {
+    //flex: 0 0 calc(100vw - 211px);
+    width: calc(100vw - 211px);
+    float: right;
+    right: 0;
+    top: 0;
+
+    &__block {
+        background-color: $background-main;
+        box-shadow: 1px 1px 4px #E3E9EC;
+        text-align: start;
+        text-transform: uppercase;
+        margin: 0px 20px;
+        margin-bottom: 120px;
+        padding-bottom: 20px;
+
+        @include font($fs: 12px, $lh: 15px, $fw: normal, $c: $color-title);
+
+        &--title {
+            margin-top: 10px;
+            padding-left: 20px;
+            margin-bottom: 14px;
+            @include font($fs: 20px, $lh: 24px, $fw: bold);
+        }
+        &--subtitle {
+            padding-left: 20px;
+            padding-top: 18px;
+        }
+
+        button {
+            @include font($fs: 16px, $lh: 19px, $fw: normal, $fy: normal, $c: $color-black);
+            outline: none;
+            border: none;
+            
+            text-align: start;
+            background-color: inherit;
+
+            padding: 0;
+            
+        }
+
+        &--titlediv {
+            display: flex;
+            border-top: 2px solid $border-color;
+            padding: 20px 20px;
+            padding-right: 0;
+
+            &:last-child {
+                border-bottom: 2px solid $border-color;
+            }
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        &--text {
+            max-width: 100%;
+            padding: 20px;
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        &--selected {
+            background-color: $background-block-selected !important;
+            border: none;
+            padding-top: 3px;
+        
+        }
+
+        &--tselected {
+            background-color: $background-block-selected !important;
+            border: none;
+            padding-top: 12px;
+        }
+    }
+
+}
+
+.check-img {
+    background-image: url('../img/check.svg');
+    width: 10px;
+    height: 6px;
+    border: none;
+    align-self: center;
+    margin-right: 20px;
+    margin-top: 3px;
+    transform: rotate(180deg);
+
+    &--selected {
+        transform: rotate(0deg);
+        margin-top: -11px;
+    }
+}

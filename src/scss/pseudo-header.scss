@@ -1,0 +1,33 @@
+@import "variables";
+
+.pseudo-header {
+    margin: 21px 0px;
+    width: 100%;
+
+    @include font($fs: 12px, $lh: 15px, $fw: normal, $c: $color-grey);
+    @include flex($fd: row-reverse);
+
+    &__item {
+        margin-right: 31px;
+        display: flex;
+        padding-top: 2px;
+
+        &:first-child {
+            margin-right: 22px;
+        }
+
+        a {
+            color: $color-grey;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        img {
+            margin-right: 8px;
+            margin-top: -1px;
+        }
+    }
+}

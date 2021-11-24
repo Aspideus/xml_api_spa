@@ -1,0 +1,48 @@
+@import "variables";
+
+.aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 211px;
+    flex: 0 0 211px;
+    height: 100vh;
+    content: '';
+    background-color: $background-aside;
+    text-align: start;
+
+   
+
+    &__item {
+        padding: 25px 20px;
+        padding-bottom: 3px;
+        display: flex;
+        text-transform: uppercase;
+
+        @include font($fs: 14px, $lh: 17px, $fw: bold, $c: $color-white);
+        img {
+            margin-right: 15px;
+            margin-top: -1px;
+        }
+
+        &--selected {
+            background-color: $background-selected;
+            border-left: 6px solid $border-selected;
+            margin-top: 19px;
+            padding-left: 13px;
+            padding-right: 0;
+            padding-top: 13px;
+            padding-bottom: 9px;
+
+            img {
+                margin-right: 14px;
+                margin-top: -2px;
+            }
+        }
+    }
+
+    &__logo {
+        margin: 20px;
+        margin-bottom: 37px;
+    }
+}

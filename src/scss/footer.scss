@@ -1,0 +1,22 @@
+@import "variables";
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: $background-color;
+
+    @include flex($jc: space-between);
+
+    &__col {
+        margin: 20px;
+        text-align: start;
+        margin-bottom: 35px;
+
+        @include font($fs: 12px, $lh: 15px);
+
+        &--ml3 {
+            margin-left: 3px;
+        }
+    }
+}
