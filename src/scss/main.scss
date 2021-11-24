@@ -60,14 +60,18 @@ p, h1 {
             background-color: inherit;
 
             padding: 0;
-            
+            padding: 20px 0 20px 20px;
+
+            &:hover {
+                cursor: pointer;
+            }
         }
 
         &--titlediv {
             display: flex;
             border-top: 2px solid $border-color;
-            padding: 20px 20px;
-            padding-right: 0;
+            //padding: 20px 20px;
+            //padding-right: 0;
 
             &:last-child {
                 border-bottom: 2px solid $border-color;
@@ -96,7 +100,8 @@ p, h1 {
         &--tselected {
             background-color: $background-block-selected !important;
             border: none;
-            padding-top: 12px;
+            padding-top: 0px;
+            margin-top: -7px;
         }
     }
 
